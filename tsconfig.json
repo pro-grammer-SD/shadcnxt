@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "jsxFactory": "pragma",
+    "allowJs": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "shadcn-xt/src/components/**/*.tsx"
+  ]
+}
