@@ -5,6 +5,9 @@ sh-*/
 # Ignore transpiled JS
 transpiled/
 
+# Ignore self-backup
+backup/
+
 # Ignore build folders
 build/
 output/
