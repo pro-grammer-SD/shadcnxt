@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Geist Sans';
+  src: url('./Geist-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+    border-radius: 10px !important;
+    font-family: 'Geist Sans', sans-serif !important;
+}

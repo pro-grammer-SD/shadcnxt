@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Select Dropdown (Alpine + Get)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+
+  <div 
+    class="relative" 
+    x-data="dropdown()" 
+    x-init="window.myDropdown = $data"
+  >
+    <button 
+      type="button"
+      @click="open = !open"
+      @click.away="open = false"
+      :aria-expanded="open"
+      class="flex w-48 items-center justify-between rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm"
+    >
+      <span x-text="selected"></span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="size-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path d="M6 9l6 6 6-6" />
+      </svg>
+    </button>
+
+    <ul 
+      x-show="open" 
+      x-cloak
+      x-transition 
+      class="absolute z-10 mt-1 w-full rounded-md border border-gray-300 bg-white shadow-lg"
+    >
+      <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer" @click="selected = 'Option 1'; open = false">Option 1</li>
+      <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer" @click="selected = 'Option 2'; open = false">Option 2</li>
+      <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer" @click="selected = 'Option 3'; open = false">Option 3</li>
+    </ul>
+  </div>
+
+  <script>
+    function dropdown() {
+      return {
+        open: false,
+        selected: 'Choose',
+        getSelected() {
+          return this.selected;
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,28 +1,3 @@
-# Ignore Stencil component outputs
-sh-*-output/
-sh-*/ 
-
-# Ignore transpiled JS
-transpiled/
-
-# Ignore self-backup
-backup/
-
-# Ignore build folders
-build/
-output/
-
-# Ignore Tailwind generated CSS
-*.css
-!globals.css  # Keep your source if needed
-
-# Node + Python build stuff
-node_modules/
-*.log
-*.pyc
-__pycache__/
-
-# VSCode + system files
-.vscode/
-.DS_Store
-Thumbs.db
+/src
+/compile
+/css
